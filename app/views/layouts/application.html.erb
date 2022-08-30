@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BlogFull</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar container">
+        <%= link_to 'Logo', root_path, class: "link-dark text-decoration-none fs-3 fw-bold" %>
+        <ul class="nav">
+          <li class="nav-item"> <%= link_to "About", about_path %> </li>
+        </ul>
+      </nav>
+    </header>
+    <%= yield %>
+  </body>
+</html>
